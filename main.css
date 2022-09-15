@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+}
+
+/* Utility Classes */
+
+i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+i.fa-star {
+    color: yellow;
+}
+
+input {
+    border-radius: 25px;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 1rem;
+    width: max(120px, 700px);
+    background: #f0f9ff;
+    outline: none;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border-radius: 25px;
+    padding: 5px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 5fr;
+    padding: 0;
+}
+
+.header {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;    
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 3px 3px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.search_bar {
+    display: flex;
+    align-self: center;
+}
+
+.user {
+    display: flex;
+    align-self: center;
+}
+
+.search_bar ul,
+.user ul {
+    display: flex;
+    list-style: none;
+}
+
+.search_bar ul {   
+    flex: 1;   
+    align-items: center;
+}
+
+.user ul {
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.search_bar ul li,
+.user ul li {
+    padding: 15px;
+}
+
+img.mini-profile {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile_info {
+    display: flex;
+    flex: 2;
+    padding: 5px;
+    align-items: center;
+}
+
+img.big-profile {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile_info > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons button {
+    color: #fff;
+    background-color: #38bdf8;
+    border: none;
+    padding: 10px 40px;
+    font-weight: 700;
+}
+
+
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #0ea5e9;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px 0 10px;
+    margin-bottom: 30px;
+}
+
+.sidebar .footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.sidebar .logo img {
+    width: 100px;
+}
+
+.sidebar .logo h1 {
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.sidebar ul {
+    padding: 20px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sidebar ul .special-item {
+    margin-top: 70px;
+}
+
+.sidebar ul i {
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+/* Main */
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: #f0f9ff;
+}
+
+.projects {
+    display: grid;
+    padding: 20px;
+}
+
+.projects h3, .announcements h3, .trending h3 {
+    padding: 10px 2px;
+}
+
+.cards {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    line-height: 1.5;
+    background: #fff;
+    box-shadow: #0ea5e9 -10px 1px, 2px 2px 5px -2px #333;    
+    border-radius: 5px;
+    
+}
+
+.icons {
+    justify-self: end;
+    align-self: end;
+    margin-top: auto;
+    padding-top: 20px;     
+}
+
+.icons i {
+    padding: 10px;
+}
+
+.card h4 {
+    padding: 5px 0;
+}
+
+/* Announcements */
+
+.announcements, .trending {
+    padding: 20px;
+    display: grid;
+}
+
+.trending {
+    align-self: end;
+}
+.announcement-wrap, .trending-wrap {
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.announcement-card {
+    padding: 10px;
+    border-bottom: .5px dotted #333;
+    margin-top: 15px;
+}
+
+.announcement-card:last-child {
+    border-bottom: none;
+}
+
+.announcement-card h5 {
+    margin-bottom: 5px;
+}
+
+.announcement-card p, .trending-card p {
+    font-size: .85rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.trending-card {
+    display: flex;
+    padding: 10px;
+}
+
+.trending-info h5 {
+    margin-bottom: 10px;
+}
+
+
+/* image: Flaticon.com */
+.trending-card img {
+    width: 50px;
+    border-radius: 50%;  
+    margin-right: 10px;  
+}
